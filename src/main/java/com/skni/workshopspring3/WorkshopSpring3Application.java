@@ -6,6 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.skni.workshopspring3.repo.entity.Course;
+import com.skni.workshopspring3.repo.entity.GenderEnum;
+import com.skni.workshopspring3.repo.entity.Student;
+import com.skni.workshopspring3.service.StudentService;
+import com.skni.workshopspring3.service.CourseService;
+import com.skni.workshopspring3.repo.entity.CourseTypeEnum;
+
 @SpringBootApplication
 public class WorkshopSpring3Application {
 
@@ -17,6 +24,7 @@ public class WorkshopSpring3Application {
 	CommandLineRunner init(CourseService courseService, StudentService studentService) {
 		return (args) -> {
 			Course course = courseService.addCourse("Informatyka", 3, "SGH", CourseTypeEnum.INZYNIER);
+
 
 			Student studentMale = studentService.addStudent(
 					"Adam",
@@ -45,7 +53,6 @@ public class WorkshopSpring3Application {
 			System.out.println(studentService.getAllStudents());
 			System.out.println(studentService.deleteStudentById(studentMale.getId()));
 			System.out.println(studentService.getAllStudents());
-
 		};
 	}
 }

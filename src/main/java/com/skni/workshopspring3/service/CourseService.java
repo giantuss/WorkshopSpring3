@@ -8,8 +8,7 @@ import com.skni.workshopspring3.repo.entity.CourseTypeEnum;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import com.skni.workshopspring3.repo.CourseRepository;
-//
+
 @Slf4j
 @Service
 @RequiredArgsConstructor

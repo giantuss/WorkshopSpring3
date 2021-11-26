@@ -1,4 +1,3 @@
-//
 package com.skni.workshopspring3.repo.entity;
 
 import javax.persistence.*;
